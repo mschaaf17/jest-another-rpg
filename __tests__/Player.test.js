@@ -1,4 +1,6 @@
 const Player = require('../lib/Player.js')
+const Potion = require('../lib/Potion.js')
+
 
 jest.mock('../lib/Potion.js')
 console.log(new Potion());
@@ -28,7 +30,7 @@ test('gets players stats as an object', () => {
 test('gets inventory from player or retruns false', () => {
     const player = new Player('Dave');
 
-    expect(player.getInventory()).toEqual(expect.any(array));
+    expect(player.getInventory()).toEqual(expect.any(Array));
 
     player.inventory = []
 
@@ -55,7 +57,7 @@ test("subtracts from players health", () =>{
 
     player.reduceHealth(5);
 
-    expect(player.health).toBe(oldHealth -5);
+    expect(player.health).toBe(oldHealth - 5);
 
     player.reduceHealth(99999);
 
