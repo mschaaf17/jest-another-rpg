@@ -1,1 +1,3 @@
-//10.1.4
+const Game = require('./lib/Game');
+
+new Game().initializeGame()
